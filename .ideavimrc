@@ -1,0 +1,150 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+" mapleader键默认设置
+let mapleader = "s"
+
+" 显示行号
+set number
+" 显示相对行号
+set relativenumber
+"vim与交互系统共享剪贴板
+set clipboard+=unnamed
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+
+" 可以在光标上/下方看到5行
+set scrolloff=5
+
+" Do incremental searching.
+" 动态高亮搜索
+set incsearch
+" 高亮显示搜索
+set hlsearch
+" 不区分大小写搜索
+set ignorecase
+" 智能大小写搜索
+set smartcase
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <r>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+" 禁用s键
+map s <nop>
+map <space> <nop>
+" 设置jj为Esc
+imap jj <Esc>
+" 延迟时间
+set timeoutlen=300
+
+" 重新加载
+noremap <silent> R :source ~/.ideavimrc<CR>
+
+" 反撤销
+noremap U <C-r>
+
+noremap j jzz
+noremap k kzz
+
+" 往左移动5列
+noremap W 5w
+" 往右移动5列
+noremap B 5b
+" 往下移动5行
+noremap J 5jzz
+" 往上移动5行
+noremap K 5kzz
+
+" 移动到行首
+noremap H ^
+" 移动到行尾
+noremap L $
+
+
+" 左右分屏
+noremap <Leader>v <C-w>v
+" 上下分屏
+noremap <Leader>vs <C-w>s
+" 切换到左边
+noremap <Leader>vh <C-w>h
+" 切换到右边
+noremap <Leader>vl <C-w>l
+" 切换到下边
+noremap <Leader>vj <C-w>j
+" 切换到上边
+noremap <Leader>vk <C-w>k
+" 轮询切换分屏
+noremap <A-w> <C-w>w
+
+" 保存
+nmap <silent> <Leader>w :w<CR>
+" 不保存退出
+nmap <silent> <Leader>q :q<CR>
+
+" 双击空格键暂时取消高亮
+noremap <silent> \ :nohlsearch<CR>
+
+" 标记跳转位置
+nnoremap ma mA
+nnoremap 'a 'A
+nnoremap ms mS
+nnoremap 's 'S
+nnoremap md mD
+nnoremap 'd 'D
+
+
+" 单词上一个/下一个
+nnoremap <C-j> *
+nnoremap <C-k> #
+" 切换左右Tab
+nnoremap <A-a> gT
+nnoremap <A-d> gt
+
+" 进入函数方法
+nnoremap <Leader>i gd
+
+" 映射idea快捷键
+nnoremap <silent> / :action Find<CR>
+nnoremap gi :action JumpToLastChange<CR>
+nnoremap <silent> <A-q> :action GotoNextError<CR>
+nnoremap <silent> <A-e> :action ShowErrorDescription<CR>
+vnoremap <silent> <Leader>u :action EditorToggleCase<CR>
+nnoremap <silent> <Leader>o :action FileStructurePopup<CR>
+nnoremap <silent> <Leader>a :action CloseAllEditorsButActive<CR>
+nnoremap <silent> <Leader>l :action IntroduceVariable<CR>
+nnoremap <silent> <Leader>r :action RenameElement<CR>
+nnoremap <silent> <Leader>h :action SearchEverywhere<CR>
+nnoremap <silent> <Leader>e :action RecentFiles<CR>
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" plugins list
+" 快速定位到指定位置
+set easymotion
+map <Leader><Leader> <Plug>(easymotion-s)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+" 多光标
+set multiple-cursors
+" 对包围进行标点操作
+set surround
+" 对文本对象进行操作
+set argtextobj
+" 复制操作时短暂高亮
+set highlightedyank
+" 自动切换中英文
+set keep-english-in-normal-and-restore-in-insert
+
+
