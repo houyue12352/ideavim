@@ -136,7 +136,7 @@ set easymotion
 map <Leader><Leader> <Plug>(easymotion-s)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
-map <Leader>f <Plug>(easymotion-fl)
+map <Leader>f <Plug>(easymotion-sl)
 " 多光标
 set multiple-cursors
 " 对包围进行标点操作
