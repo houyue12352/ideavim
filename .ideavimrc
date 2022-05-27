@@ -120,7 +120,7 @@ nnoremap <silent> <Leader>rn :action RenameElement<CR>
 " 查找所有类
 nnoremap <silent> <Leader>h :action SearchEverywhere<CR>
 " 关闭其它tab
-nnoremap <silent> <Leader>a :action CloseAllEditorsButActive<CR>
+nnoremap <silent> <Leader>c :action CloseAllEditorsButActive<CR>
 " 格式化代码
 nnoremap <silent> <space>l :action ReformatCode<CR>
 " 自动补全返回值
