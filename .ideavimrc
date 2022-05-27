@@ -3,7 +3,7 @@
 
 "---------- vim相关设置 ----------
 " mapleader键默认设置
-let mapleader = "s
+let mapleader = "s"
 set showmode
 " 显示行号
 set number
@@ -62,9 +62,9 @@ noremap <silent> \ :nohlsearch<CR>
 
 "---------- 分屏设置 ----------
 " 左右分屏
-noremap <Leader>v <C-w>v
+noremap <Leader>vv :action MoveTabRight<CR>
 " 上下分屏
-noremap <Leader>vs <C-w>s
+noremap <Leader>vs :action MoveTabDown<CR>
 " 切换到左边
 noremap <Leader>vh <C-w>h
 " 切换到右边
@@ -75,6 +75,10 @@ noremap <Leader>vj <C-w>j
 noremap <Leader>vk <C-w>k
 " 轮询切换分屏
 noremap <A-v> <C-w>w
+" 关闭分屏
+noremap <Leader>vn :action Unsplit<CR>
+" 最大化分屏
+noremap <Leader>vm :action MaximizeEditorInSplit<CR>
 
 " 标记跳转位置
 nnoremap ma mA
@@ -131,6 +135,10 @@ nnoremap <silent> <space>e :action RecentFiles<CR>
 nnoremap <silent> <space>h :action CallHierarchy<CR>
 " 取消/隐藏活动窗口
 nnoremap <silent> <space><space> :action HideActiveWindow<CR>
+nnoremap <silent> <A-CR> :action ToggleFullScreen<CR>:action ViewToolBar<CR>:action ViewToolButtons<CR>
+nnoremap <silent> <A-,> :action ViewToolBar<CR>
+nnoremap <silent> <A-.> :action ViewToolButtons<CR>
+
 
 "---------- plugins list ----------
 " 快速定位到指定位置
