@@ -115,10 +115,8 @@ nnoremap <silent> <A-r> :action ShowErrorDescription<CR>
 nnoremap M :action MethodUp<CR>
 " 进入全屏模式并隐藏toolbar
 nnoremap <silent> <A-CR> :action ToggleFullScreen<CR>:action ViewToolBar<CR>:action ViewToolButtons<CR>
-" 隐藏上面的toolbar
-nnoremap <silent> <A-,> :action ViewToolBar<CR>
-" 隐藏下面的toolbar
-nnoremap <silent> <A-.> :action ViewToolButtons<CR>
+" 隐藏toolbar
+nnoremap <silent> <A-\> :action ViewToolBar<CR>:action ViewToolButtons<CR>
 " 大小写转换
 noremap <silent> gu :action EditorToggleCase<CR>
 " 展示类中所有方法
