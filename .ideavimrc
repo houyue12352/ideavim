@@ -46,9 +46,9 @@ noremap J 5jzz
 " 往上移动5行
 noremap K 5kzz
 " 移动到行首
-noremap gh ^
+noremap H ^
 " 移动到行尾
-noremap gl $
+noremap L $
 " 行首插入
 noremap <Leader>h I
 " 行尾插入
@@ -69,10 +69,14 @@ nnoremap 's 'S
 nnoremap md mD
 nnoremap 'd 'D
 " 单词上一个/下一个
-nnoremap <C-m> *
+nnoremap <C-j> *
+nnoremap <C-k> #
 " 切换左右Tab
 nnoremap <C-h> gT
 nnoremap <C-l> gt
+" 优化缩进
+vnoremap > >gv
+vnoremap < <gv
 " 进入函数方法
 nnoremap <Leader>i gd
 
@@ -99,16 +103,16 @@ noremap <Leader>vm :action MaximizeEditorInSplit<CR>
 "---------- 映射idea快捷键 ----------
 " 跳转上次修改位置
 nnoremap gi :action JumpToLastChange<CR>
-" 全文查找
-nnoremap gf :action FindInPath<CR>
 " 查找
-noremap <silent> <C-f> :action Find<CR>
+noremap gf :action Find<CR>
+" 全文查找
+nnoremap gh :action FindInPath<CR>
 " 下一个错误
 nnoremap <silent> <A-q> :action GotoNextError<CR>
 " 显示具体错误
 nnoremap <silent> <A-r> :action ShowErrorDescription<CR>
 " 上一个方法
-nnoremap <silent> <A-u> :action MethodUp<CR>
+nnoremap M :action MethodUp<CR>
 " 进入全屏模式并隐藏toolbar
 nnoremap <silent> <A-CR> :action ToggleFullScreen<CR>:action ViewToolBar<CR>:action ViewToolButtons<CR>
 " 隐藏上面的toolbar
@@ -145,4 +149,5 @@ set highlightedyank
 " 自动切换中英文
 set keep-english-in-normal
 set keep-english-in-normal-and-restore-in-insert
+
 
