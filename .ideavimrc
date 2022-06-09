@@ -110,7 +110,7 @@ nnoremap gh :action FindInPath<CR>
 " 下一个错误
 nnoremap <silent> <A-q> :action GotoNextError<CR>
 " 显示具体错误
-nnoremap <silent> <A-r> :action ShowErrorDescription<CR>
+nnoremap <silent> <A-e> :action ShowErrorDescription<CR>
 " 上一个方法
 nnoremap M :action MethodUp<CR>
 " 进入全屏模式并隐藏toolbar
