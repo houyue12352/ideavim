@@ -113,10 +113,14 @@ nnoremap <silent> <A-q> :action GotoNextError<CR>
 nnoremap <silent> <A-e> :action ShowErrorDescription<CR>
 " 上一个方法
 nnoremap M :action MethodUp<CR>
+" 下一个方法
+nnoremap M :action MethodDown<CR>
 " 进入全屏模式并隐藏toolbar
 nnoremap <silent> <A-CR> :action ToggleFullScreen<CR>:action ViewToolBar<CR>:action ViewToolButtons<CR>
 " 隐藏toolbar
 nnoremap <silent> <A-\> :action ViewToolBar<CR>:action ViewToolButtons<CR>
+" 定位文件在项目目录位置
+nnoremap <silent> <A-1> :action SelectInProjectViwe<CR>
 " 大小写转换
 noremap <silent> gu :action EditorToggleCase<CR>
 " 展示类中所有方法
