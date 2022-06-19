@@ -32,3 +32,4 @@ CapsLock & w:: ^w
 CapsLock & x:: ^x
 CapsLock & y:: ^y
 CapsLock & z:: ^z
+CapsLock & /:: ^/
