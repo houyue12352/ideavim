@@ -148,6 +148,8 @@ set surround
 set argtextobj
 " 复制操作时短暂高亮
 set highlightedyank
+" 替换
+set ReplaceWithRegister
 " 自动切换中英文
 set keep-english-in-normal
 set keep-english-in-normal-and-restore-in-insert
