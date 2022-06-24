@@ -112,7 +112,7 @@ nnoremap <silent> <A-e>j :action GotoNextError<CR>
 " 上一个错误
 nnoremap <silent> <A-e>k :action GotoPreviousError<CR>
 " 显示具体错误
-nnoremap <silent> <A-e>s :action ShowErrorDescription<CR>
+nnoremap <silent> <A-r> :action ShowErrorDescription<CR>
 " 上一个方法
 nnoremap M :action MethodUp<CR>
 " 下一个方法
