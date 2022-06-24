@@ -108,9 +108,9 @@ noremap gf :action Find<CR>
 " 全文查找
 nnoremap gh :action FindInPath<CR>
 " 下一个错误
-nnoremap <silent> <A-e>j :action GotoNextError<CR>
+nnoremap <silent> <A-e> :action GotoNextError<CR>
 " 上一个错误
-nnoremap <silent> <A-e>k :action GotoPreviousError<CR>
+nnoremap <silent> <A-q> :action GotoPreviousError<CR>
 " 显示具体错误
 nnoremap <silent> <A-r> :action ShowErrorDescription<CR>
 " 上一个方法
